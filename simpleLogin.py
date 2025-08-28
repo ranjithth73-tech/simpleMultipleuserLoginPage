@@ -1,3 +1,5 @@
+from itertools import count
+
 users = {}
 
 while True:
@@ -28,9 +30,10 @@ while True:
 print('================================')
 print('             LOG IN             ')
 print('================================')
-logsuccess = False
-
-while not logsuccess:
+# logsuccess = False
+count = 1
+# while not logsuccess:
+while count < 4:
     logusr = input('Enter Your Username : ')
     logpass = input('Enter Your Password : ')
     print('---------------------------------')
@@ -43,3 +46,4 @@ while not logsuccess:
         break
     else:
         print('Enter Correct Details, Try again!')
+        count +=1
